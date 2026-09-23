@@ -70,6 +70,7 @@
     position: relative;
     flex-shrink: 0;
     filter: grayscale(15%);
+    border-radius: 16px;
     transition: filter 0.3s, border-color 0.3s;
   }
   .hero-photo-wrap:hover { filter: grayscale(0%); border-color: var(--accent); }
@@ -85,6 +86,7 @@
     bottom: -6px; right: -6px;
     width: 100%; height: 100%;
     border: 1px solid rgba(232,255,71,0.25);
+    border-radius: 16px;
     z-index: -1;
     transition: bottom 0.3s, right 0.3s;
   }
@@ -225,6 +227,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 14px 28px;
+    border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .btn-primary:hover {
@@ -242,6 +245,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 14px 28px;
+    border-radius: 10px;
     transition: border-color 0.2s, color 0.2s;
   }
   .btn-ghost:hover { border-color: var(--text); color: var(--text); }
@@ -259,6 +263,7 @@
     padding: 32px 40px;
     text-align: right;
     width: 280px;
+    border-radius: 12px;
     transition: border-color 0.3s;
   }
   .stat-block:hover { border-color: var(--accent); }
@@ -396,6 +401,7 @@
     padding: 40px 48px;
     text-decoration: none;
     color: inherit;
+    border-radius: 14px;
     transition: background 0.2s;
     position: relative;
     overflow: hidden;
@@ -434,6 +440,7 @@
     font-size: 10px;
     color: var(--accent);
     border: 1px solid rgba(232,255,71,0.3);
+    border-radius: 20px;
     padding: 4px 10px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -449,6 +456,7 @@
   .skill-card {
     background: var(--bg);
     padding: 40px 32px;
+    border-radius: 14px;
     transition: background 0.3s;
     position: relative;
     overflow: hidden;
@@ -471,17 +479,19 @@
   .certs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
+    gap: 16px;
+    background: transparent;
   }
   .cert-card {
     background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
     padding: 40px 32px;
-    transition: background 0.3s;
+    transition: background 0.3s, border-color 0.3s;
     position: relative;
     overflow: hidden;
   }
-  .cert-card:hover { background: var(--card); }
+  .cert-card:hover { background: var(--card); border-color: var(--accent); }
   .cert-card::after {
     content: '';
     position: absolute;
@@ -521,13 +531,11 @@
     display: flex;
     flex-wrap: wrap;
     background: transparent;
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
+    border: none;
+    gap: 16px;
   }
   .certs-grid-4 .cert-card {
     flex: 1 1 260px;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
   }
   .certs-grid-4 .cert-card { padding: 32px 24px; }
   .certs-grid-4 .cert-title { font-size: 17px; }
@@ -544,6 +552,7 @@
   .growth-card {
     background: var(--bg);
     padding: 48px 40px;
+    border-radius: 14px;
     transition: background 0.3s;
   }
   .growth-card:hover { background: var(--card); }
@@ -677,6 +686,7 @@
   .lightbox-inner img {
     width: 100%;
     border: 1px solid var(--border);
+    border-radius: 14px;
     display: block;
   }
   .lightbox-close {
@@ -699,6 +709,7 @@
     font-size: 10px;
     color: var(--accent);
     border: 1px solid rgba(232,255,71,0.3);
+    border-radius: 6px;
     padding: 4px 10px;
     margin-top: 16px;
     letter-spacing: 0.08em;
@@ -801,25 +812,25 @@
     <div class="about-text reveal">
       <p>
         I'm <strong>Benjamin Umeh</strong>, a Product Manager with a BSc in
-        <strong>Computer Science</strong>. My technical
-        foundation gives me an edge most PMs lack I understand the systems behind
-        the products I manage.
+        <strong>Computer Science</strong>. That background means I understand the
+        systems behind the products I manage, not just the surface.
       </p>
       <p>
-        I've owned the full product lifecycle across three products
-        <strong>Outbound AI</strong>, <strong>FitCall.me</strong>, and <strong>DEPATH</strong> — driving everything
-        from PRD creation and pricing strategy to design coordination and cross-team
-        execution. My work on Outbound AI earned commendation from senior mentors, and
-        FitCall.me is currently in active build with me leading the product. Most recently,
-        I founded <strong>DEPATH</strong>, a Nigeria-first route safety platform, where I owned
-        product strategy, verification architecture, and AI workflow design end-to-end —
-        including running a full codebase audit that caught a data-fabrication risk before
-        a single user saw it.
+        I've worked on four products: <strong>Outbound AI</strong>, <strong>FitCall.me</strong>,
+        <strong>DEPATH</strong>, and <strong>AdaptPulse</strong>. My work covers PRDs, pricing,
+        design coordination, and working across teams to get things shipped. My work on
+        Outbound AI was commended by senior mentors, and FitCall.me is currently in build
+        with me leading the product. I founded <strong>DEPATH</strong>, a Nigeria-first route
+        safety platform, where I owned the product strategy and AI workflow design, and
+        caught a data-fabrication risk during a codebase audit before any user saw it.
+        I'm also building <strong>AdaptPulse</strong>, a product that helps users
+        build transferrable skills.
       </p>
       <p>
-        My approach is rooted in <strong>user empathy</strong>, structured documentation,
-        and the ability to communicate clearly across engineering, design, and business
-        stakeholders. I adapt fast, collaborate well, and ship.
+        I hold <strong>8 certifications</strong> in product management and AI, including
+        Aha!'s Product Management Professional Certificate and Microsoft's Azure AI
+        Essentials Professional Certificate. I communicate clearly with engineering,
+        design, and business teams, adapt fast, and ship.
       </p>
     </div>
     <div class="about-details reveal">
@@ -863,7 +874,7 @@
       <div class="project-info">
         <div class="project-name">
           DEPATH Founder & Product Manager
-          <span style="font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(232,255,71,0.3);padding:3px 8px;margin-left:12px;vertical-align:middle;">Pre-launch MVP</span>
+          <span style="font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(232,255,71,0.3);border-radius:14px;padding:3px 8px;margin-left:12px;vertical-align:middle;">Pre-launch MVP</span>
         </div>
         <div class="project-desc" style="margin-bottom:20px;">
           Founder and Product Manager for DEPATH, a Nigeria-first route safety platform — a pre-travel
@@ -875,8 +886,8 @@
           route analyzer before a single user saw it.
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://depath.ai.studio" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;border:1px solid rgba(232,255,71,0.3);padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(232,255,71,0.08)'" onmouseout="this.style.background='transparent'">Live Site →</a>
-          <a href="https://docs.google.com/document/d/1tytCx0JGLU52zXNXt3ByCfzjT_HTl6J4neq3fR-lY84/edit?usp=sharing" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">View Case Study →</a>
+          <a href="https://depath.ai.studio" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;border:1px solid rgba(232,255,71,0.3);border-radius:8px;padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(232,255,71,0.08)'" onmouseout="this.style.background='transparent'">Live Site →</a>
+          <a href="https://docs.google.com/document/d/1tytCx0JGLU52zXNXt3ByCfzjT_HTl6J4neq3fR-lY84/edit?usp=sharing" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;border:1px solid var(--border);border-radius:8px;padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">View Case Study →</a>
         </div>
       </div>
       <div class="project-tags">
@@ -941,7 +952,7 @@
       <div class="project-info">
         <div class="project-name">
           AdaptPulse Founder & Product Lead
-          <span style="font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(232,255,71,0.3);padding:3px 8px;margin-left:12px;vertical-align:middle;">Design Stage</span>
+          <span style="font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(232,255,71,0.3);border-radius:14px;padding:3px 8px;margin-left:12px;vertical-align:middle;">Design Stage</span>
         </div>
         <div class="project-desc" style="margin-bottom:20px;">
           Founder and Product Lead for AdaptPulse, a simulation-based adaptability training concept built as a
@@ -952,7 +963,7 @@
           IBM Plex Mono, and wrote the build prompt for Google AI Studio.
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://adaptpulse.ai.studio" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;border:1px solid rgba(232,255,71,0.3);padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(232,255,71,0.08)'" onmouseout="this.style.background='transparent'">Live Site →</a>
+          <a href="https://adaptpulse.ai.studio" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;border:1px solid rgba(232,255,71,0.3);border-radius:8px;padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(232,255,71,0.08)'" onmouseout="this.style.background='transparent'">Live Site →</a>
         </div>
       </div>
       <div class="project-tags">
@@ -983,7 +994,7 @@
       <div class="project-info">
         <div class="project-name">
           FitCall.me Product Manager
-          <span style="font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(232,255,71,0.3);padding:3px 8px;margin-left:12px;vertical-align:middle;">In Build</span>
+          <span style="font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid rgba(232,255,71,0.3);border-radius:14px;padding:3px 8px;margin-left:12px;vertical-align:middle;">In Build</span>
         </div>
         <div class="project-desc" style="margin-bottom:20px;">
           Served as Product Manager for FitCall.me a virtual fitness platform connecting US and UK clients
@@ -995,8 +1006,8 @@
           moments in the build phase.
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://fitcall.me" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;border:1px solid rgba(232,255,71,0.3);padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(232,255,71,0.08)'" onmouseout="this.style.background='transparent'">Live Site →</a>
-          <a href="https://docs.google.com/document/d/1zqzi6jXhuFyq1_e2zEdYof1UXOXS-GALWfmxdch_G3o/edit?usp=sharing" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">View PRD →</a>
+          <a href="https://fitcall.me" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-decoration:none;border:1px solid rgba(232,255,71,0.3);border-radius:8px;padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(232,255,71,0.08)'" onmouseout="this.style.background='transparent'">Live Site →</a>
+          <a href="https://docs.google.com/document/d/1zqzi6jXhuFyq1_e2zEdYof1UXOXS-GALWfmxdch_G3o/edit?usp=sharing" target="_blank" style="font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;border:1px solid var(--border);border-radius:8px;padding:6px 14px;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">View PRD →</a>
         </div>
       </div>
       <div class="project-tags">
